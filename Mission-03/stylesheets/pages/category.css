@@ -1,0 +1,266 @@
+/* 카테고리별 추천 광고상품 */
+/* 헤더 영역 */
+.header {
+  margin: 10rem auto 4.8rem;
+  width: 102rem;
+}
+
+.brand {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.brand__link {
+  display: block;
+}
+
+/* 카테고리 */
+.category {
+  width: 102rem;
+  margin: 0 auto;
+}
+
+/* 카테고리 헤드라인 영역 */
+.category__headline {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.category__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.category__title--accent {
+  color: var(--color-blue-600);
+}
+
+.category__enTitle {
+  order: -1;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* 카테고리(생활용품/주방용품) */
+.categoryUnit {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin: 2.4rem 0;
+}
+
+.categoryUnit::before {
+  content: "";
+  position: absolute;
+  width: 52.8rem;
+  height: 0.1rem;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  border: 1px solid var(--color-gray-100);
+}
+
+.houseware {
+  border-color: var(--color-brown-300);
+}
+
+.houseware .categoryUnit__title,
+.houseware .hashTag__link {
+  color: var(--color-brown-300);
+}
+
+.houseware .carousel__caption {
+  background-color: var(--color-brown-300);
+}
+
+.kitchenware {
+  border-color: var(--color-green-700);
+}
+
+.kitchenware .categoryUnit__title,
+.kitchenware .hashTag__link {
+  color: var(--color-green-700);
+}
+
+.kitchenware .carousel__caption {
+  background-color: var(--color-green-700);
+}
+
+.categoryUnit__group:nth-child(1) {
+  display: flex;
+  flex-grow: 1;
+  flex-flow: column nowrap;
+  padding: 4.8rem 2.4rem 2.8rem;
+}
+
+.categoryUnit__group:nth-child(2) {
+  width: 32rem;
+}
+
+.categoryUnit__group:nth-child(3) {
+  width: 52.8rem;
+}
+
+/* categoryUnit headline */
+.categoryUnit__headline {
+  flex-grow: 1;
+}
+
+.categoryUnit__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.categoryUnit__goLink {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-gray-700);
+  background: url(./../../assets/icon/angle-right-default.svg) no-repeat 100%
+    50%;
+  padding-right: 1rem;
+}
+
+/* 해시 태그 영역 */
+.hashTag__title {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.hashTag__list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.hashTag__item {
+  margin-top: 1.2rem;
+}
+
+.hashTag__link {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  border: 1px solid var(--color-gray-400);
+}
+
+/* 캐러셀 영역 */
+.carousel {
+  position: relative;
+  width: 32rem;
+}
+
+.carousel__controles {
+  position: absolute;
+  bottom: 2.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel__indicator {
+  margin-left: 0.8rem;
+  padding: 0;
+  width: 1rem;
+  height: 1rem;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--color-gray-600);
+}
+
+.carousel__indicator:first-child {
+  margin-left: 0;
+}
+
+.carousel__indicator.is--active {
+  background-color: var(--color-gray-700);
+}
+
+.carousel__list {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+}
+
+.carousel__caption {
+  position: absolute;
+  padding: 2rem;
+  width: 26rem;
+  left: 50%;
+  bottom: 5.8rem;
+  text-align: center;
+  color: var(--color-white);
+  transform: translateX(-50%);
+}
+
+.carousel__caption--large {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.carousel__caption--small {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.carousel__item {
+  display: none;
+  width: 100%;
+}
+
+.carousel__item.is--active {
+  display: block;
+}
+
+/* 상품 카드 링크 영역 */
+.categoryUnit__list {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.categoryUnit__item {
+  margin: 0.8rem 0 0.8rem 1.6rem;
+  width: 16rem;
+  height: 30rem;
+}
+
+.product__caption {
+  margin: 1.2rem 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.product__price {
+  margin-right: 0.6rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+.currencyUnit {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.priceInstant, .priceWow {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.4rem;
+  color: var(--color-red-500);
+}
